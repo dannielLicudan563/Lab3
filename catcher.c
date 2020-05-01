@@ -63,10 +63,6 @@ void handler(int mysignal)
         termFlag = 0;
         break;
 
-        case 9:
-
-        break;
-
         case 10:
         printf("\nSIGUSR1 caught at %ld\n", time(NULL));
         signal(SIGUSR1, handler);
@@ -119,10 +115,6 @@ void handler(int mysignal)
         printf("\nSIGCONT caught at %ld\n", time(NULL));
         signal(SIGCONT, handler);
         termFlag = 0;
-        break;
-
-        case 19:
-
         break;
 
         case 20:
@@ -186,12 +178,6 @@ void handler(int mysignal)
 int main(int argc, char* argv[])
 {
     int sigCount;
-
-    int termCount;
-
-
-
-
 
     printf("%d\n", getpid());
 
