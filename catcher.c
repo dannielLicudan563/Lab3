@@ -179,7 +179,7 @@ int main(int argc, char* argv[])
 {
     int sigCount;
 
-    printf("%d\n", getpid());
+    fprintf(stderr,"%d\n", getpid());
 
     while(1)
     {
@@ -217,7 +217,7 @@ int main(int argc, char* argv[])
 
             if(termFlag == 3)
             {
-                printf("Total Signal Count: %d\n", sigCount);
+                fprintf(stderr,"Total Signal Count: %d\n", sigCount);
                 exit(0);
             }
         }
